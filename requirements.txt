@@ -1,0 +1,3 @@
+Django==1.11.4
+orm-choices==0.2.2
+pytz==2017.2
