@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	
-		<ul>
-			{% for category in categories %}
-    		<li><a href="{% url 'category' category.id %}">{{ category.name }}</a></li>
-			{% endfor %}
-		</ul>
-	
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+	<h2 style="text-decoration: underline;">Pick your category</h2>
+    <ul>
+        {% for category in categories %}
+        <li><a href="{% url 'category' category.id %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

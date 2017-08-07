@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	
-		<ul>
-			{% for book in books %}
-    		<li><a href="{% url 'book' book.id %}">{{ book.title }}</a></li>
-			{% endfor %}
-		</ul>
-		
-	
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+	<h2 style="text-decoration: underline;">Pick your book</h2>
+    <ul>
+        {% for book in books %}
+        <li><a href="{% url 'book' book.id %}">{{ book.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
